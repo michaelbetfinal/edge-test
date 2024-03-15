@@ -1,10 +1,12 @@
-import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
-import { useRouter } from 'next/router'
+import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
+
+export const runtime = "experimental-edge";
 
 export default function All() {
-  const { query } = useRouter()
-  const { t, lang } = useTranslation()
+  const { query } = useRouter();
+  const { t, lang } = useTranslation();
 
   return (
     <>
@@ -12,5 +14,5 @@ export default function All() {
       <br />
       <Link href="/">{t`more-examples:go-to-home`}</Link>
     </>
-  )
+  );
 }
